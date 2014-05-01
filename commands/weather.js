@@ -11,7 +11,7 @@ module.exports = {
                     if (data.cod != "200") {
 						callback(data.message);
 					} else {
-                        callback((data.main.temp - 273).toFixed(2) + " Celsius, " + data.weather[0].main);
+                        callback("Weather in " + data.name + ", " + data.sys.country + ": " + (data.main.temp - 273).toFixed(2) + " Celsius, " + data.weather[0].main);
                     }
 				}
 			});
