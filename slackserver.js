@@ -19,6 +19,7 @@ var bible = require("./commands/bible.js");
 var analyze = require("./commands/analyze.js");
 var combine = require("./commands/combine.js");
 var youtube = require("./commands/youtube.js");
+var weather = require("./commands/weather.js");
 
 var app = express();
 app.use(bodyParser());
@@ -73,7 +74,8 @@ trigger_word=googlebot:
   bible: bible.def,
   analyze: analyze.def,
   combine: combine.def,
-  youtube: youtube.def
+  youtube: youtube.def,
+  weather: weather.def
 }
 
 var execute_command = function (hook, callback) {
