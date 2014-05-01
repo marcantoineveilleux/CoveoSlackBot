@@ -17,7 +17,7 @@ module.exports = {
 			});
 		},
 		help : function (callback) {
-			callback("Display the current weather somewhere. Usage !weather @city (e.g. !weather Jonquière)");
+			callback("Display the current weather somewhere. Usage !weather @city (e.g. !weather Paris)");
 		}
 	}
 }
