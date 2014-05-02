@@ -3,7 +3,7 @@ var request = require("request");
 module.exports = {
 	def : {
 		exec : function (hook, callback) {
-			request("https://www.googleapis.com/youtube/v3/search?key=AIzaSyBDY0V5hCftse3HpUCvOP4O1u-1GrAvjm8&part=id&q=" + hook.command_text, function (err, res, body) {
+			request("https://www.googleapis.com/youtube/v3/search?key=AIzaSyBDY0V5hCftse3HpUCvOP4O1u-1GrAvjm8&part=id&type=video&q=" + hook.command_text, function (err, res, body) {
 				if (err || res.statusCode != 200) {
 					callback("Error " + err);
 				} else {
