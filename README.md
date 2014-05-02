@@ -19,7 +19,7 @@ That's it! Use `!help` within a public slack.com channel for a list of commands.
 
 Contributions are welcome!
 
-Adding a command is simple. Add a `.js` file within the `command` folder.
+Adding a command is simple. Add a `.js` file within the `commands` folder.
 Add it to the list of available commands within `slackserver.js`.
 
 You're done!
