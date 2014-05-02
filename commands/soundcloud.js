@@ -11,7 +11,7 @@ module.exports = {
                     if (data.length < 1) {
 						callback("Found nothing.");
 					} else {
-                        callback(data[0].permalink_url);
+                        callback(data[0].permalink_url.replace("http", "https"));
                     }
 				}
 			});
