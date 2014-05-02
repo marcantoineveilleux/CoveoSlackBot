@@ -103,7 +103,8 @@ var execute_command = function (hook, callback) {
         callback(result)
       } else {
 				callback({
-					text : result
+					text : result,
+                    unfurl_links: true
 				});
 			}
 		}, commands);
