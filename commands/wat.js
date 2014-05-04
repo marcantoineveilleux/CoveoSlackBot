@@ -1,4 +1,4 @@
-module.exports = {
+﻿module.exports = {
   def: {
     exec : function (hook, callback) {
     callback(hook.user_name + " hurts itself in its confusion!");

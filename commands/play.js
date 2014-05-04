@@ -1,4 +1,4 @@
-
+﻿
 var players = {};
 
 var getRandomInt = function (min, max) {

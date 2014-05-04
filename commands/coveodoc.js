@@ -1,4 +1,4 @@
-module.exports = {
+﻿module.exports = {
   def: { 
     exec : function (hook, callback) {
       callback("https://developers.coveo.com/dosearchsite.action#q=" + hook.command_text);

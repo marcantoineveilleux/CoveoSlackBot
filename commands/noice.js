@@ -1,4 +1,4 @@
-module.exports = {
+﻿module.exports = {
   def: {
     exec : function (hook, callback) {
       callback(hook.user_name + " thinks " + (hook.command_text ? hook.command_text : "gsimard") + " is noice!");

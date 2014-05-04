@@ -1,4 +1,4 @@
- module.exports = {
+﻿ module.exports = {
   def: {
     exec: function(hook, callback, commands) {
         wtfThatCodeIsUgly(hook, callback, commands)

@@ -1,4 +1,4 @@
-var express = require("express");
+﻿var express = require("express");
 var bodyParser = require('body-parser');
 var requireDir = require("require-dir");
 
@@ -78,7 +78,7 @@ app.use(bodyParser());
 var port = Number(process.env.PORT || 5000);
 
 app.get("/", function (req, res) {
-    res.send("Slack bot online");
+    res.send("Slack bot online °");
 });
 
 app.post('/', function (req, res) {

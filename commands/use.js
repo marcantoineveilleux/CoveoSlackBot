@@ -1,4 +1,4 @@
-module.exports = {
+﻿module.exports = {
     def: {
         exec : function (hook, callback) {
             var splited = hook.command_text.split(" ");

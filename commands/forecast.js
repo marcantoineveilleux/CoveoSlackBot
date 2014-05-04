@@ -1,4 +1,4 @@
-var request = require("request");
+﻿var request = require("request");
 
 module.exports = {
 	def : {
@@ -11,10 +11,9 @@ module.exports = {
                     if (data.cod != "200") {
 						callback(data.message);
 					} else {
-                        
                         var weathers = [];
                         data.list.forEach(function(weather){
-                            weathers.push(new Date(weather.dt*1000).toDateString() + ": " + (weather.temp.day - 273).toFixed(2) + " �C, " + weather.weather[0].main);
+                            weathers.push(new Date(weather.dt*1000).toDateString() + ": " + (weather.temp.day - 273).toFixed(2) + " °C, " + weather.weather[0].main);
                         });
                         
                         callback("Weather in " + data.city.name + ", " + data.city.country + " for the next 5 days\n " + weathers.join("\n"));
