@@ -3,8 +3,23 @@
 CoveoSlackBot
 =============
 
+##Setup
+
 Tiny node.js bot for slack.com used at Coveo
 
 Run it with `node slackserver.js`.
 
-Use `!help` for a list of commands.
+Configure an outgoing webhook. 
+* Bind it to the trigger word `!`.
+* Point the URL to your node.js server.
+
+That's it! Use `!help` within a public slack.com channel for a list of commands.
+
+##Contributions
+
+Contributions are welcome!
+
+Adding a command is simple. Add a `.js` file within the `commands` folder. It will be automatically loaded and added to the list of available commands.
+
+You're done!
+See the other commands for inspiration.

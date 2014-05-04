@@ -2,19 +2,6 @@ var express = require("express");
 var bodyParser = require('body-parser');
 var requireDir = require("require-dir");
 
-var requiredCommands = requireDir("./commands");
-
-var app = express();
-app.use(bodyParser());
-var port = Number(process.env.PORT || 5000);
-app.listen(port, function () {
-    console.log("listening on " + port);
-});
-
-app.get("/", function (req, res) {
-    res.send("Slack bot online");
-});
-
 var commands = {
     help : {
         exec : function (hook, callback) {
@@ -29,9 +16,12 @@ var commands = {
         }
     }
 };
+// Register all command in the ./commands folder
+var requiredCommands = requireDir("./commands");
 Object.keys(requiredCommands).forEach(function (requiredCommand) {
     commands[requiredCommand.replace("_", "")] = requiredCommands[requiredCommand].def
 });
+
 
 /*
 hook contains the following:
@@ -82,6 +72,14 @@ var execute_command = function (hook, callback) {
     }
 }
 
+var app = express();
+app.use(bodyParser());
+var port = Number(process.env.PORT || 5000);
+
+app.get("/", function (req, res) {
+    res.send("Slack bot online");
+});
+
 app.post('/', function (req, res) {
     hook = req.body;
     try {
@@ -94,4 +92,8 @@ app.post('/', function (req, res) {
             text : "Error."
         });
     }
+});
+
+app.listen(port, function () {
+    console.log("Listening on " + port);
 });
