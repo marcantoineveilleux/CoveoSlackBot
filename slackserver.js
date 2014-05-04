@@ -19,6 +19,7 @@ var commands = {
 // Register all command in the ./commands folder
 var requiredCommands = requireDir("./commands");
 Object.keys(requiredCommands).forEach(function (requiredCommand) {
+    // Commands that start with a _ use a special keyword to avoid name conflicts. Simply remove it.
     commands[requiredCommand.replace("_", "")] = requiredCommands[requiredCommand].def
 });
 

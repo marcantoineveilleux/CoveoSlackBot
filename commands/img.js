@@ -16,7 +16,7 @@ module.exports = {
 			});
 		},
 		help : function (callback) {
-			callback("Display an image. Usage !img @image_name");
+			callback("Displays an image. Usage !img @image_name");
 		}
 	}
 }
