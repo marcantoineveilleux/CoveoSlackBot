@@ -1,6 +1,7 @@
-﻿var express = require("express");
+var express = require("express");
 var bodyParser = require('body-parser');
 var requireDir = require("require-dir");
+var logentries = require("./incominghook/logentries");
 
 var commands = {
     help : {
@@ -93,6 +94,15 @@ app.post('/', function (req, res) {
             text : "Error."
         });
     }
+});
+
+app.post('/logentries', function(req, res){
+  var payload = JSON.parse(req.body.payload);
+  logentries.alert({
+      environment: payload.host.name,
+      event: payload.event.m,
+      time: new Date(payload.event.t).toISOString()
+  }, req.query.channel);
 });
 
 app.listen(port, function () {
