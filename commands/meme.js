@@ -32,7 +32,7 @@ module.exports = {
 			    request.get('https://api.imgflip.com/get_memes', function(e, r, body) {
 			      var memes = JSON.parse(body).data.memes;
 			      var matches = _.filter(memes, function(meme) {
-			        return meme.name.toLowerCase().indexOf("simply") >= 0;
+			        return meme.name.toLowerCase().indexOf(query) >= 0;
 			      });
 			      if(matches.length == 0) {
 			      	fnCallback(-1, "No meme found!");
