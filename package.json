@@ -8,7 +8,8 @@
     "express": "~4.0.0",
     "sentiment": "~1.0.0-alpha",
     "request": "~2.34.0",
-    "node-slack": "0.0.3"
+    "node-slack": "0.0.3",
+    "underscore": "1.6.0"
   },
   "devDependencies": {},
   "scripts": {
