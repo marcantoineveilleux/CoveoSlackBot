@@ -6,7 +6,7 @@ module.exports = {
 		exec : function (hook, callback) {
 			var commandArguments = hook.command_text.split("|");
 
-			getMeme(commandArguments[0], function(id, err){
+			getMeme(commandArguments[0].toLower(), function(id, err){
 				if(err) {
 					callback(err);
 				} else {
