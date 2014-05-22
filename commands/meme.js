@@ -26,8 +26,8 @@ function getMemes(query, fnCallback) {
       if(matches.length == 0) {
         fnCallback("No meme found!");
       } else {
-        fnCallback(matches.map(function(match){return match.id}).join(', '));
-      }     
+        fnCallback(matches.map(function(match){return match.name}).join(', '));
+      }
     })
 }
 
