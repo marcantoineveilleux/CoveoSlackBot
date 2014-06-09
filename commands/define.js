@@ -12,7 +12,7 @@ module.exports = {
             var data = JSON.parse(body);
             if(data.list != null && data.list.length > 0){
               var result = data.list[0] 
-              var text = '*'+result.word+'*: `'+result.example.split('\n').join('` `')+'` \n '+result.definition;
+              var text = '*'+result.word+'*: `'+result.example.replace(/(\r|\n)+/g,'` `')+'` \n ```'+result.definition+'```';
               callback(text);
             } else {
               callback("No result"); 
