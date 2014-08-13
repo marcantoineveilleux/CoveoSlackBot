@@ -9,7 +9,8 @@
     "sentiment": "~1.0.0-alpha",
     "request": "~2.34.0",
     "node-slack": "0.0.3",
-    "underscore": "1.6.0"
+    "underscore": "1.6.0",
+    "postmark": "0.2.5"
   },
   "devDependencies": {},
   "scripts": {
