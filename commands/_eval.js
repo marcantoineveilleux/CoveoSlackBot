@@ -1,4 +1,4 @@
-﻿
+/*﻿
 module.exports = {
   def: {
     exec : function (hook, callback) {
@@ -9,3 +9,4 @@ module.exports = {
     }
   }
 }
+*/
