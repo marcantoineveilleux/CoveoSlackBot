@@ -1,5 +1,5 @@
-/*﻿key = new Buffer("ZGY2MTBiY2ItY2E3NC00MGRhLTk5YzctM2VhZjY2ZmE1NWMy", "base64").toString("ascii")
-	var postmark = require("postmark")(key);
+key = new Buffer("ZGY2MTBiY2ItY2E3NC00MGRhLTk5YzctM2VhZjY2ZmE1NWMy", "base64").toString("ascii")
+var postmark = require("postmark")(key);
 
 module.exports = {
 	def : {
@@ -22,4 +22,3 @@ module.exports = {
 		}
 	}
 }
-*/
